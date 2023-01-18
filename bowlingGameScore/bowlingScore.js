@@ -33,6 +33,7 @@ const getScoreOneGame= (rolls) => {
     else if((rolls[idx] + rolls[idx + 1]) == 10) // spare in 10th frame
     {
       score += rolls[idx] + rolls[idx + 1];
+      break;
     }
     else if(rolls[idx] == 10) // strike in 10th frame
     {
@@ -44,7 +45,7 @@ const getScoreOneGame= (rolls) => {
   return score;
 }
 // console.log(getScoreOneGame([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])); 
-// console.log(getScoreOneGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
+console.log(getScoreOneGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
 // console.log(getScoreOneGame([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])); 
 
 const bestScoreCalculator = (allRolls) => {
