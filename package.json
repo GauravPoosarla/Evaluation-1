@@ -1,0 +1,26 @@
+{
+  "name": "evaluation-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GauravPoosarla/Evaluation-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GauravPoosarla/Evaluation-1/issues"
+  },
+  "homepage": "https://github.com/GauravPoosarla/Evaluation-1#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
