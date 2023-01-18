@@ -22,5 +22,8 @@
   "homepage": "https://github.com/GauravPoosarla/Evaluation-1#readme",
   "dependencies": {
     "jest": "^29.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0"
   }
 }
