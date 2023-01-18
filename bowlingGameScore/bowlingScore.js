@@ -12,12 +12,11 @@ const getScoreOneGame= (rolls) => {
       // console.log(score);
     }
     else if((rolls[idx] < 10) && (idx + 2 < 18 && rolls[idx] + rolls[idx + 1]) == 10) { // spare case
-      // console.log(2);
       score += 10 + rolls[idx + 2];
       idx++;
       // console.log(score);
     }
-    else if (rolls[idx] == 10 && idx + 2 < 18) { // strike case
+    else if (rolls[idx] == 10 && idx + 2 < lengthOfRolls) { // strike case
       // console.log(3);
       score += 10 + rolls[idx + 1] + rolls[idx + 2];
       // console.log(score);
@@ -38,15 +37,15 @@ const getScoreOneGame= (rolls) => {
     else if(rolls[idx] == 10) // strike in 10th frame
     {
       // console.log(rolls[idx], rolls[idx + 1], rolls[idx + 2]);
-      score += rolls[idx] + rolls[idx + 1]; + rolls[idx + 2];
+      score += rolls[idx] + rolls[idx + 1] + rolls[idx + 2];
       break;
     }
   }
   return score;
 }
-// console.log(getScoreOneGame([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])); 
-// console.log(getScoreOneGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
-// console.log(getScoreOneGame([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])); 
+console.log(getScoreOneGame([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])); 
+console.log(getScoreOneGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
+console.log(getScoreOneGame([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])); 
 
 const bestScoreCalculator = (allRolls) => {
   let scores = [];
